@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik',sans-serif;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+}
+
+.profile-card {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.profile-info {
+    background-color: var(--Blue);
+    height: 65%;
+    border-radius: 15px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 75px;
+    height: 75px;
+    border: 3px solid var(--Pale-Blue);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.profile-info span {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: var(--Pale-Blue);
+}
+
+.profile-name {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.switch-time {
+    height: 35%;
+}
+
+.list {
+    list-style: none;
+    padding: 20px 0 15px 30px;
+}
+
+.time {
+    font-size: 1.8rem;
+    padding: 10px 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: var(--Pale-Blue);
+    transition: color 0.3s ease;
+}
+
+.time:hover {
+    color: #ffffff;
+}
+
+.active-time {
+    color: #ffffff;
+}
+
