@@ -6,7 +6,7 @@
 
 :root {
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Light-orange: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
@@ -16,6 +16,32 @@
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+/* colors */
+
+.light-orange {
+    background-color: var(--Light-orange);
+}
+
+.soft-blue {
+    background-color: var(--Soft-blue);
+}
+
+.light-red {
+    background-color: var(--Light-red);
+}
+
+.lime-green {
+    background-color: var(--Lime-green);
+}
+
+.violet {
+    background-color: var(--Violet);
+}
+
+.soft-orange {
+    background-color: var(--Soft-orange);
 }
 
 html {
@@ -44,8 +70,35 @@ body {
 .card {
     width: 100%;
     height: 100%;
-    background-color: var(--Dark-blue);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+.card-icon {
+    width: 75px;
+    height: 75px;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 90%;
+    transform: translateX(-90%);
+}
+
+.card-info {
+    height: 75%;
+    border-radius: 15px;
+    z-index: 2;
+    background-color: var(--Dark-blue);
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card-info:hover {
+    cursor: pointer;
+    background-color: var(--Desaturated-blue);
 }
 
 .profile-card {
@@ -53,13 +106,16 @@ body {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    background-color: var(--Dark-blue);
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-info {
     background-color: var(--Blue);
     height: 65%;
     border-radius: 15px;
-    padding: 15px 25px;
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -110,3 +166,36 @@ body {
     color: #ffffff;
 }
 
+.card-title {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+.card-current-time {
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.card-last-time {
+    margin-top: 15px;
+    color: var(--Pale-Blue);
+    font-size: 1.8rem;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translate(-10px,15px);
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    color: var(--Desaturated-blue);
+}
+
+.menu-icon:hover {
+    color: #ffffff;
+}
