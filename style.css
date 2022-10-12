@@ -60,7 +60,6 @@ body {
 
 .container {
     width: 1000px;
-    height: 500px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -87,7 +86,7 @@ body {
 }
 
 .card-info {
-    height: 75%;
+    height: 80%;
     border-radius: 15px;
     z-index: 2;
     background-color: var(--Dark-blue);
@@ -198,4 +197,59 @@ body {
 
 .menu-icon:hover {
     color: #ffffff;
+}
+
+@media only screen and (max-width: 758px) {
+    .container {
+        grid-template-columns: 300px;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        padding: 50px 0
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+        padding: 0 20px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .profile-card {
+        height: 200px;   
+        grid-column-start: unset;
+        grid-column-end: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+    }
+
+    .profile-name {
+        font-size: 2.4rem;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+    }
+
+    .card-time-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+
+    .card-current-time {
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .card-last-time {
+        font-size: 1.6rem;
+    }
+
 }
