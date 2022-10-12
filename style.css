@@ -133,10 +133,13 @@ body {
     color: var(--Pale-Blue);
 }
 
+.profile-row {
+    margin-top: 20px;
+}
+
 .profile-name {
     font-size: 4rem;
     font-weight: 300;
-    margin-top: 20px;
 }
 
 .switch-time {
@@ -172,14 +175,14 @@ body {
 }
 
 .card-current-time {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 5px;
     font-size: 4rem;
     font-weight: 400;
 }
 
 .card-last-time {
-    margin-top: 15px;
+    margin-top: 5px;
     color: var(--Pale-Blue);
     font-size: 1.8rem;
 }
